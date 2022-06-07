@@ -6,7 +6,10 @@
         <h5 class="card-title">{{ item.title }}</h5>
         <p class="card-text">{{ item.content }}</p>
         <p class="card-text"><small class="text-muted">{{ item.lastUpdated }}</small></p>
-        <a (click)="addOrRemoveFromReadingList(item.id)" class="btn" [ngClass]="readingList.includes(item.id)? 'btn-outline-dark' : 'btn-dark'">{{readingList.includes(item.id)? 'Remove from reading-list' : 'Add to reading-list'}}</a>
+        <a class="btn"
+          [ngClass]="readingList.includes(item.id)? 'btn-outline-dark' : 'btn-dark'"
+          (click)="addOrRemoveFromReadingList(item.id)">{{readingList.includes(item.id)? 'Remove from reading-list' : 'Add to reading-list'}}</a>
+        <span style="margin-left: 10px;"><i class="fas fa-thumbs-up text-secondary h4"></i> 200</span>
       </div>
     </div>
   </div>
