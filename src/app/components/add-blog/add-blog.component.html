@@ -30,6 +30,9 @@
             <div class="text-danger" *ngIf="blogForm.controls['content'].touched && blogForm.controls['content'].hasError('maxlength')">
               Content must not exceed 200 character.
             </div>
+            <div class="text-danger" *ngIf="blogForm.controls['content'].touched && blogForm.controls['content'].hasError('isEmpty')">
+              Content cannot be empty.
+            </div>
           </div>
           <div style="text-align: right;"><a class="btn btn-dark" (click)="create()">Save</a></div>
         </form>

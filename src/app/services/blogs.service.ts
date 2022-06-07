@@ -7,7 +7,7 @@ import { BlogId } from '../models/readingList.model';
 })
 export class BlogsService {
 
-  // these data should come from api call
+  // data should come from an api call
   data: Blog[] = [
     {id: 1, title: "Components", content: "This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.", lastUpdated: "Last updated 3 hours ago", likes: 1, liked: true},
     {id: 2, title: "Directives", content: "This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.", lastUpdated: "Last updated 5 days ago", likes: 25, liked: false},
@@ -17,8 +17,14 @@ export class BlogsService {
 
   constructor() { }
 
+  // this should be a POST api call to the backend
   addBlog(blog: Partial<Blog>) {
     blog = { ...blog, id: this.data[this.data.length -1].id + 1, liked: false, likes: 0, lastUpdated: "Last updated 1 min ago" }
-    this.data.unshift(blog as Blog);
+    this.data.push(blog as Blog);
+  }
+
+  // get readinList blogs only
+  getReadingList() {
+    return this.data.filter(item => this.readingList.includes(item.id));
   }
 }

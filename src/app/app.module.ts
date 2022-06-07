@@ -8,6 +8,7 @@ import { ListBlogsComponent } from './components/list-blogs/list-blogs.component
 import { AddBlogComponent } from './components/add-blog/add-blog.component';
 import { LikesComponent } from './components/likes/likes.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ReadingListComponent } from './components/reading-list/reading-list.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     HeaderComponent,
     ListBlogsComponent,
     AddBlogComponent,
-    LikesComponent
+    LikesComponent,
+    ReadingListComponent
   ],
   imports: [
     BrowserModule,
