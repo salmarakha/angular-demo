@@ -1,1 +1,6 @@
-<p>likes works!</p>
+<span style="margin-left: 10px;">
+  <i class="fas fa-thumbs-up h4"
+    [ngClass]="liked? 'text-success' : 'text-secondary'"
+    style="cursor: pointer;"
+    (click)="toggleLike()"></i> {{likesCount}}
+</span>

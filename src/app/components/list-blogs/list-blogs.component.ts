@@ -31,4 +31,10 @@ export class ListBlogsComponent implements OnInit {
     this.readingList = this.blogsService.readingList;
   }
 
+  manageLikes(action: boolean, index: number) {
+    this.blogs[index].liked = action;
+    action? ++this.blogs[index].likes : --this.blogs[index].likes;
+    this.blogsService.data = this.blogs;
+  }
+
 }

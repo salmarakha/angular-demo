@@ -9,9 +9,9 @@ export class BlogsService {
 
   // these data should come from api call
   data: Blog[] = [
-    {id: 1, title: "Components", content: "This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.", lastUpdated: "Last updated 3 mins ago"},
-    {id: 2, title: "Directives", content: "This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.", lastUpdated: "Last updated 3 mins ago"},
-    {id: 3, title: "Pipes", content: "This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.", lastUpdated: "Last updated 3 mins ago"},
+    {id: 1, title: "Components", content: "This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.", lastUpdated: "Last updated 3 mins ago", likes: 1, liked: true},
+    {id: 2, title: "Directives", content: "This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.", lastUpdated: "Last updated 3 mins ago", likes: 25, liked: false},
+    {id: 3, title: "Pipes", content: "This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.", lastUpdated: "Last updated 3 mins ago", likes: 150, liked: false},
   ]
   readingList: BlogId[] = [2];
 

@@ -10,7 +10,7 @@ export class HeaderComponent implements OnInit {
 
   readingListCount: number = 0;
 
-  constructor(private blogService: BlogsService) { }
+  constructor(public blogService: BlogsService) { }
 
   ngOnInit(): void {
     this.readingListCount = this.blogService.readingList.length;
