@@ -7,6 +7,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { ListBlogsComponent } from './components/list-blogs/list-blogs.component';
 import { AddBlogComponent } from './components/add-blog/add-blog.component';
 import { LikesComponent } from './components/likes/likes.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,9 @@ import { LikesComponent } from './components/likes/likes.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,1 +1,38 @@
-<p>add-blog works!</p>
+<div class="row mt-3 mx-5">
+    <div class="card mb-3 mt-3 p-5 pt-0 pb-3">
+      <div class="card-body">
+        <form [formGroup]="blogForm">
+          <div class="form-group mb-3">
+            <label for="exampleFormControlInput1">Title</label>
+            <input type="email"
+              formControlName="title"
+              class="form-control"
+              id="exampleFormControlInput1"
+              placeholder="Title"
+              [ngClass]="{'is-valid': blogForm.controls['title'].touched && blogForm.controls['title'].valid,
+                'is-invalid': blogForm.controls['title'].touched && blogForm.controls['title'].invalid}">
+            <div class="text-danger" *ngIf="blogForm.controls['title'].touched && blogForm.controls['title'].invalid">
+              Title is required.
+            </div>
+          </div>
+          <div class="form-group mb-3">
+            <label for="exampleFormControlTextarea1">Content</label>
+            <textarea class="form-control"
+              formControlName="content"
+              id="exampleFormControlTextarea1"
+              rows="3"
+              placeholder="Blog content.."
+              [ngClass]="{'is-valid': blogForm.controls['content'].touched && blogForm.controls['content'].valid,
+                'is-invalid': blogForm.controls['content'].touched && blogForm.controls['content'].invalid}"></textarea>
+            <div class="text-danger" *ngIf="blogForm.controls['content'].touched && blogForm.controls['content'].hasError('required')">
+              Content is required.
+            </div>
+            <div class="text-danger" *ngIf="blogForm.controls['content'].touched && blogForm.controls['content'].hasError('maxlength')">
+              Content must not exceed 200 character.
+            </div>
+          </div>
+          <div style="text-align: right;"><a class="btn btn-dark" (click)="create()">Save</a></div>
+        </form>
+      </div>
+    </div>
+</div>
