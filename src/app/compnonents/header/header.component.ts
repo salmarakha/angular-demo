@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { BlogsService } from 'src/app/services/blogs.service';
 
 @Component({
   selector: 'app-header',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
+  readingListCount: number = 0;
+
+  constructor(private blogService: BlogsService) { }
 
   ngOnInit(): void {
+    this.readingListCount = this.blogService.readingList.length;
   }
 
 }
