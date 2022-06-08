@@ -8,7 +8,7 @@
         <p class="card-text"><small class="text-muted">{{ item.lastUpdated }}</small></p>
         <a class="btn"
           [ngClass]="readingList.includes(item.id)? 'btn-outline-dark' : 'btn-dark'"
-          (click)="addOrRemoveFromReadingList(item.id)">{{readingList.includes(item.id)? 'Remove from reading-list' : 'Add to reading-list'}}</a>
+          (click)="addOrRemoveFromReadingList(item.id)">{{readingList.includes(item.id)? 'Remove bookmark' : 'Bookmark'}}</a>
         <likes
           [liked]="item.liked"
           [likesCount]="item.likes"
